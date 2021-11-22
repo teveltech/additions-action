@@ -1,0 +1,18 @@
+name: 'Addition-action'
+description: 'Returns the lines added to a string'
+branding:
+  icon: 'anchor'
+  color: 'orange'
+inputs:
+  old:
+    description: "old string"
+    required: true
+  new:
+    description: "new string"
+    required: true
+outputs:
+  additions:
+    description: "Lines added"
+runs:
+  using: 'node12'
+  main: 'main.js'
