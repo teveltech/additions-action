@@ -6,6 +6,6 @@ const new_str = core.getInput("new");
 
 const additions = diff.diffTrimmedLines(old_str, new_str).filter((change) => change.added).map((change) => change.value.trim());
 
-const additions_str = additions.toString().replace(',', '\n');
+const additions_str = additions.toString().replace(/,/g, '\n');
 
 core.setOutput("additions", additions_str);
