@@ -15,7 +15,8 @@ const deletions_arr = deletions_str.split(/\n/g);
 
 let changes_str = "";
 for (let i = 0; i < (additions_arr.length > deletions_arr.length ? additions_arr.length : deletions_arr.length); i++) {
-    changes_str += deletions_arr[i] + " -> " + additions_arr[i] + '\n';
+    if (deletions_arr[i] != additions_arr[i])
+        changes_str += deletions_arr[i] + " -> " + additions_arr[i] + '\n';
 }
 
 core.setOutput("added", additions_str);
