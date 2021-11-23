@@ -1,5 +1,5 @@
-name: 'Addition-action'
-description: 'Returns the lines added to a string'
+name: 'Diff-action'
+description: 'Returns the diff between two strings'
 branding:
   icon: 'anchor'
   color: 'orange'
@@ -11,8 +11,12 @@ inputs:
     description: "new string"
     required: true
 outputs:
-  additions:
+  added:
     description: "Lines added"
+  removed:
+    description: "Lines removed"
+  changed:
+    description: "Lines changed"
 runs:
   using: 'node12'
   main: 'main.js'
